@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Online PassKey</title>
+
+    <!-- Bootstrap -->
+    <link href="__STATIC__/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" style="width:300px;" >
+
+          <form>
+            <h2 class="form-signin-heading;" id="h2id" style="text-align:center;">Please input key</h2>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" name="password" autofocus="autofocus" class="form-control" placeholder="key" required onkeydown="if(event.keyCode==13){post.check();}">
+            <input type="password" style="display:none;">
+          </br>
+            <button class="btn btn-lg btn-primary btn-block copy" data-clipboard-text="qwe" id='copy_true' type="button" onclick="post.check();">生成</button>
+            <a class="btn btn-lg btn-primary btn-block copy" type="button" href="{:url('index/index/index')}">新系统</a>
+          </form>
+        </div>
+    <script type="text/javascript" src="__STATIC__/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/layer/layer.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/dialog.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/post.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/clipboard.min.js"></script>
+
+  </body>
+</html>
